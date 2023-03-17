@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Entry point 
+ * main - Entry point
  *
  * Return: Always 0 (success)
  */
@@ -10,7 +10,7 @@ int main(void)
 {
 int n;
 srand(time(NULL));
-n = rand() % 201 - 100;
+n = rand() - RAND_MAX / 2;
 printf("%d\n", n);
 if (n > 0)
 {
@@ -20,7 +20,7 @@ else if (n == 0)
 {
 printf("is zero\n");
 }
-else
+else if (n < 0)
 {
 printf("is negative\n");
 }
