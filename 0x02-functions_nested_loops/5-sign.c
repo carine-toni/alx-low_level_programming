@@ -2,25 +2,36 @@
 #include"main.h"
 /**
  * print_sign - writes the character c to stdout
- * @c: The character to print
+ * @n: The character to print
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return:1 if n is greater than zero, 0 if n is zero, and -1 if n is le
+ * than zero.
  */
-int print_sign(int n) {
-  if (n > 0) 
+int print_sign(int n)
 {
-_putchar("+");
-return 1;
-} 
-else if (n == 0) 
+char sign;
+if (n > 0)
 {
-_putchar("0");
-return 0;
-} 
+sign = '+';
+_putchar(sign);
+return (1);
+}
+else if (n == 0)
+{
+sign = '0';
+_putchar(sign);
+return (0);
+}
+else if (n > 0)
+{
+sign = '+';
+putchar(sign);
+return (1);
+}
 else
 {
-_putchar("-");
-return -1;
+sign = '-';
+_putchar(sign);
+return (-1);
 }
 }
